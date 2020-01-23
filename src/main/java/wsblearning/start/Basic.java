@@ -1,10 +1,7 @@
 package wsblearning.start;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Basic {
@@ -20,6 +17,7 @@ public class Basic {
         Person person = new Person("Mateusz", "Rychłowski",
                 21, "Malbork");
 
+
         Book book = new Book("Dziady", person);
 
         boolean isAdded = book.addPage("wefewfewfewfewwe");
@@ -27,45 +25,53 @@ public class Basic {
         if(!isAdded) System.out.println("Strona nie mogła zostać dodana, bo jest za długa");
 
 
-        System.out.println(    book.getAuthor().getLastname()   );
+
+        Map<String, int[]> money = new HashMap<>();
+
+        //money.put("Tomek Kowalski", new ArrayList<>());
+
+        List<String> list = new ArrayList<>();
+        list.add("test");
+        list.add("test2");
+
+     //   money.put("Ada Kowalska", list);
+
+        System.out.println(money.get("Ada Kowalska"));
 
 
+         Map<String, Integer> map = new TreeMap<>();
 
+         map.put("test1", 10);
+         map.put("test2", 102424);
+         map.put("test3", 1110);
+         map.put("aATest99", 1990);
+         map.put("aaaaTest1", 412104);
 
+         Queue<String> queue = new PriorityQueue<>();
 
-
-
-//        String[] lines = new String[]{
+         queue.add("aaest1");
+         queue.add("bbtest");
+         queue.add("55bbtescct");
+         queue.add("aa55bbtescct");
 //
-//               "To jest linijka  1" ,
-//               "To jest linijka  2" ,
-//               "To jest linijka  3" ,
-//               "To jest linijka  4" ,
-//               "To jest linijka  5" ,
-//               "To jest linijka  6" ,
-//               "To jest linijka  7"
+//        System.out.println(queue.poll());
 //
-//        };
-
-        List<String> linesArray = new ArrayList<>(8);
-
-                linesArray.add("To jest linijka  1");
-                linesArray.add("To jest linijka  2");
-                linesArray.add("To jest linijka  3");
-                linesArray.add("To jest linijka  4");
-                linesArray.add("To jest linijka  5");
-                linesArray.add("To jest linijka  6");
-                linesArray.add("To jest linijka  7");
-
-                linesArray.add("To jest linijka  8");
+//        System.out.println(queue.poll());
+//
+//        System.out.println(queue.peek());
+//
+//        System.out.println(queue.size());
 
 
-                Iterator<String> it = linesArray.iterator();
-                while(it.hasNext()){
-                    it.next();
-                    it.remove();
-                }
-        System.out.println(linesArray);
+        Iterator<String> it = queue.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+
+
+
+        System.out.println(map);
+
 
 
 //        for(String s : lines){
