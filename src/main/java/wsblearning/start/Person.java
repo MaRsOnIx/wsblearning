@@ -14,6 +14,10 @@ public class Person {
         this.city = city;
     }
 
+    public String getFullname(){
+        return this.firstname+" "+this.lastname;
+    }
+
     public String getFirstname() {
         return firstname;
     }
