@@ -14,33 +14,7 @@ public class Basic {
         basic.run();
     }
 
-    private void run(){
-
-        if(true){
-            Autor autor = new Autor("", "Testowy", 12, "");
-            autor.getBooks()
-                    .add(new Book("Książka", autor,
-                            createDate(1, 12, 2009)));
-
-
-            System.out.println(autor.getLastname());
-            if(true)return;
-            int num = 2;
-            int num2 = 1;
-
-
-            String text = null;
-
-            try {
-                System.out.println(num / num2);
-                System.out.println(text.length());
-            }catch (ArithmeticException | NullPointerException e){
-                System.out.println("Wystąpił błąd");
-            }
-            System.out.println("test");
-
-            return;
-        }
+    private void run() {
 
 
         System.out.println("Program został poprawnie uruchomiony..");
@@ -61,9 +35,24 @@ public class Basic {
         shelf.remove(book);
         shelf.remove(book);
 
-        boolean isAdded = book.addPage("wefewfewfewfewwe");
+        try {
+            book.addPage("wefewfewfyregfjryfgjygfjgfuguiguigffrergrgergererewfewwe");
+        }catch (PrzekroczonoIloscZnakowException e) {
+            e.printStackTrace();
+        }
 
-        if(!isAdded) System.out.println("Strona nie mogła zostać dodana, bo jest za długa");
+
+
+
+
+        Autor autor = new Autor("Jan", "Kowalski", 30, "Warszawa");
+
+        Book ksiazka = new Book("Książka", autor, createDate(1, 12, 2009));
+
+        autor.getBooks().add(ksiazka);
+
+       // System.out.println(autor);
+        System.out.println(ksiazka);
 
     }
 

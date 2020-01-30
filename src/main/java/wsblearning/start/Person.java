@@ -7,7 +7,6 @@ public class Person {
     private int age;
     private String city;
 
-    protected String text = "efgeeweewffew";
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
@@ -39,4 +38,5 @@ public class Person {
     public String getCity() {
         return city;
     }
+
 }

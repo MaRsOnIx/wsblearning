@@ -25,10 +25,10 @@ public class Book {
         this.published=published;
     }
 
-    public boolean addPage(String text){
-        if(text.length()>50) return false;
+    public void addPage(String text) throws PrzekroczonoIloscZnakowException {
+        if(text.length()>50) throw new PrzekroczonoIloscZnakowException("Przekroczyłeś ilość znaków!!!!!!! błąd");
         getPages().add(text);
-        return true;
+
     }
 
 
@@ -52,5 +52,15 @@ public class Book {
     }
     public LocalDate getPublished() {
         return published;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", pages=" + pages +
+                ", published=" + published +
+                ", author=" + author.getFullname() +
+                '}';
     }
 }

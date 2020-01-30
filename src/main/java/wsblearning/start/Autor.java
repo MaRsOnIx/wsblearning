@@ -14,4 +14,10 @@ public class Autor extends Person {
     public List<Book> getBooks() {
         return books;
     }
+
+    @Override
+    public String toString(){
+       return getFullname()+" "+getCity()+" "+getAge()+" "+"["+getBooks().toString()+"]";
+    }
+
 }
