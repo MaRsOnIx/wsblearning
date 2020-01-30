@@ -7,6 +7,12 @@ public class Person {
     private int age;
     private String city;
 
+    protected String text = "efgeeweewffew";
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     public Person(String firstname, String lastname, int age, String city) {
         this.firstname = firstname;
         this.lastname = lastname;
