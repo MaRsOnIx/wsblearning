@@ -2,10 +2,13 @@ package wsblearning.start;
 
 
 import javax.swing.text.DateFormatter;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.List;
 
 public class Basic {
 
@@ -15,6 +18,14 @@ public class Basic {
     }
 
     private void run() {
+
+        BigDecimal bi = new BigDecimal("9223372036832532325352325355334434534554335454354354354354775806");
+      //  BigInteger bi2 = new BigInteger("92233720368547753353323232234335806");
+
+        BigDecimal bd = new BigDecimal("5.5555");
+        System.out.println(bd.multiply(bi));
+
+      //  System.out.println(bi.add(bi2).toString());
 
 
         System.out.println("Program został poprawnie uruchomiony..");
